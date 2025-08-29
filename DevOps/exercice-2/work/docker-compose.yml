@@ -5,11 +5,7 @@ services:
     image: nextcloud:latest
     ports:
       - "8080:80"
-    environment:
-      - POSTGRES_DB=nextcloud
-      - POSTGRES_USER=nextcloud
-      - POSTGRES_PASSWORD=nextcloud123
-      - POSTGRES_HOST=postgres
+    env_file: ./nextcloud/.env
     volumes:
       - nextcloud_data:/var/www/html
     depends_on:
@@ -17,10 +13,7 @@ services:
 
   postgres:
     image: postgres:13
-    environment:
-      - POSTGRES_DB=nextcloud
-      - POSTGRES_USER=nextcloud
-      - POSTGRES_PASSWORD=nextcloud123
+    env_file: ./postgres/.env
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
