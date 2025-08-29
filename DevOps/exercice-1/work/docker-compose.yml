@@ -4,11 +4,7 @@ services:
     image: wordpress:latest
     ports:
       - "8080:80"
-    environment:
-      WORDPRESS_DB_HOST: mysql
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
-      WORDPRESS_DB_NAME: wordpress
+    env_file: ./wordpress/.env
     volumes:
       - wordpress_data:/var/www/html
     depends_on:
@@ -16,11 +12,7 @@ services:
 
   mysql:
     image: mysql:8.0
-    environment:
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
-      MYSQL_ROOT_PASSWORD: rootpassword
+    env_file: ./mysql/.env
     volumes:
       - mysql_data:/var/lib/mysql
     ports:
@@ -30,10 +22,7 @@ services:
     image: phpmyadmin/phpmyadmin
     ports:
       - "8081:80"
-    environment:
-      PMA_HOST: mysql
-      PMA_USER: wordpress
-      PMA_PASSWORD: wordpress
+    env_file: ./phpmyadmin/.env
     depends_on:
       - mysql
 

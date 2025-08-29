@@ -1,4 +1,6 @@
-## Devops - Exercice 1
+# Devops - Exercice 1
+
+## 1. Consignes
 
 ### **Contexte Entreprise :**
 
@@ -11,7 +13,7 @@
 3. Sécuriser la configuration (mots de passe, réseau)                       .env pour pouvoir communiquer le code ?
 4. Tester l'accès à WordPress (port 8080) et PhpMyAdmin (port 8081)       ✅
 
-## Ex 1
+## 2. Travaux
 
 ### Problème détecté
 
@@ -29,7 +31,7 @@ You need to specify one of the following as an environment variable:
 ```
 
 
-### Général
+### Infos utiles
 
 Containers :
 - phpmyadmin - phpmyadmin/phpmyadmin - `http://localhost:8081/` [Doc image Docker](https://hub.docker.com/_/mysql)
@@ -41,16 +43,14 @@ Containers :
 ### Solution envisagée
 - Etape 1 : Il y a déjà des variables définies dans le docker-compose, on y ajoute ces dernières.
 
-Résultats
-Pour wordpress : Lancement d'une installation Wordpress -> Semble fonctionner
-Pour phpamind : 3 bdd, 1 vide, deux avec des tables mais vide ?
-
 - Etape 2 : La doc du Docker hub indique que seul MYSQL_ROOT_PASSWORD semble obligatoire pour notre problème
 
 - Etape 3 : on externalise les variables dans un .env
 
 
-#### Wordpress :
+Résultats :
+Pour wordpress : Lancement d'une installation Wordpress -> Semble fonctionner  
+Pour phpamind : 3 bdd, 1 vide, deux avec des tables mais vide ?
 
 
-
+## 3. Doc envisagée
