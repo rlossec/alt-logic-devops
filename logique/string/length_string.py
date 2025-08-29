@@ -1,7 +1,7 @@
 ## 1. Fonction qui prend une chaîne de caractères en paramètre et retourne sa longueur après avoir supprimé tous les espaces.
 
-def length_string(string: str) -> int:
-    
+def length_string(string: str|int) -> int:
+    string = str(string)
     string_without_space = string.replace(' ', '')
     return len(string_without_space)
 
@@ -15,8 +15,8 @@ if __name__ == "__main__":
     assert length_string(" ") == 0
 
     # # Tests si le typage n'est pas string
-    # ## Si le type est convertible
-    # assert length_string(145) == 3
+    ## Si le type est convertible
+    assert length_string(145) == 3
 
     # ## Si le type est convertible
     # assert length_string(dict()) == 0
