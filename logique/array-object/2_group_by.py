@@ -1,5 +1,8 @@
+from filter_by_property import filter_by_property
+
 def group_by(objects_list: list, property: str) -> dict:
-    pass
+    return { object_item[property]: filter_by_property(objects_list, property, object_item[property]) for object_item in objects_list}
+
 
 
 if __name__ == "__main__":
@@ -11,4 +14,6 @@ if __name__ == "__main__":
         {"id": 3, "name": "T-shirt", "category": "Clothing", "price": 29}
     ]
     print(group_by(products, 'category'))
-    # {"Electronics": [...], "Clothing": [...]}
+    # {'Electronics': [{'id': 1, 'name': 'Laptop', 'category': 'Electronics', 'price': 999}, {'id': 2, 'name': 'Smartphone', 'category': 'Electronics', 'price': 699}], 'Clothing': [{'id': 3, 'name': 'T-shirt', 'category': 'Clothing', 'price': 29}]}
+
+    assert group_by(products, 'category') == {'Electronics': [{'id': 1, 'name': 'Laptop', 'category': 'Electronics', 'price': 999}, {'id': 2, 'name': 'Smartphone', 'category': 'Electronics', 'price': 699}], 'Clothing': [{'id': 3, 'name': 'T-shirt', 'category': 'Clothing', 'price': 29}]}
