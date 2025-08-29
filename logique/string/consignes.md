@@ -1,7 +1,7 @@
 
 
 ## 1. Fonction qui prend une chaîne de caractères en paramètre et retourne sa longueur après avoir supprimé tous les espaces.
-
+[length_string.py](length_string.py)
 ## 2. Développez une fonction qui accepte un prénom en paramètre et renvoie une salutation personnalisée en mettant la première lettre en majuscule.
 
 ## 3. Écrivez une fonction qui détermine si une chaîne de caractères se termine par un point d'exclamation.

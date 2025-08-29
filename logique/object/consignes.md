@@ -1,5 +1,7 @@
 # 1. Écrivez une fonction qui récupère toutes les valeurs d'un objet
+[1_get_object_values.py](get_object_values.py)
 # 2. Écrivez une fonction qui transforme les valeurs d'un objet
+[2_transform_values.py](transform_values.py)
 # 3. Écrivez une fonction qui fusionne deux objets en sommant les valeurs numériques communes
 # 4. Écrivez une fonction qui filtre un objet selon une condition sur les valeurs
 # 5. Écrivez une fonction qui convertit un objet plat en objet imbriqué en utilisant les points comme séparateurs

@@ -10,8 +10,7 @@ On retrouve
 
 ## Logique
 
-Un dossier par section. Pour chaque section, un consignes.md avec les exercices à faire.
-Enfin, un fichier par exercice, avec un nombre pour s'y retrouver plus facilement (en réalité, je les grouperai par groupe de logique)
+Un dossier par section. Pour chaque section, un `consignes.md` avec les exercices à faire et le lien vers le fichier.
 
 
 ## Devops
