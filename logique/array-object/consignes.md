@@ -4,7 +4,7 @@
 # 2. Écrivez une fonction qui groupe les éléments d'un tableau selon une propriété
 [group_by.py](group_by.py)
 # 3. Écrivez une fonction qui trouve l'intersection entre deux tableaux d'objets selon une propriété donnée
-
+[find_intersection.py](find_intersection.py)
 # 4. Écrivez une fonction qui transforme un tableau d'objets en utilisant une fonction de mapping personnalisée
 
 # 5. Écrivez une fonction qui agrège les données d'un tableau d'objets
