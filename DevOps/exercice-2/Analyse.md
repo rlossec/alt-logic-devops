@@ -1,4 +1,6 @@
-## Devops - Exercice 2
+# Devops - Exercice 2
+
+## Consignes
 
 ### **Contexte Entreprise :**
 
@@ -10,3 +12,5 @@
 2. Intégrer Redis comme cache pour Nextcloud
 3. Mettre en place les health checks appropriés
 4. Tester l'accès à Nextcloud et la création d'un utilisateur admin
+
+## Travaux
