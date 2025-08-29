@@ -1,5 +1,6 @@
+from typing import List, Dict, Union
 
-def filter_by_property(objects_list: list, property: str, value: any) -> list:
+def filter_by_property(objects_list: List[Dict], property: str, value: any) -> List[Dict]:
     return [object_item for object_item in objects_list if object_item[property] == value]
 
 

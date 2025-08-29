@@ -1,6 +1,7 @@
+from typing import List, Dict, Union
 from filter_by_property import filter_by_property
 
-def group_by(objects_list: list, property: str) -> dict:
+def group_by(objects_list: List[Dict], property: str) -> Dict[str, List[Dict]]:
     return { object_item[property]: filter_by_property(objects_list, property, object_item[property]) for object_item in objects_list}
 
 

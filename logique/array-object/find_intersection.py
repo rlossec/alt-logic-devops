@@ -1,8 +1,8 @@
-
+from typing import List, Dict, Union
 from all_objects_has_property import all_objects_has_property
 
 
-def find_intersection(objects_list_1: list, objects_list_2: list, property: str) -> list|str:
+def find_intersection(objects_list_1: List[Dict], objects_list_2: List[Dict], property: str) -> Union[List[Dict], str]:
     ## Tester si les listes ont la propriété
     if not all_objects_has_property(objects_list_1, property) or not all_objects_has_property(objects_list_2, property) :
         return f"Tous les objets n'ont pas la propriété {property}"
