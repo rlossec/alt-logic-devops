@@ -1,5 +1,4 @@
 
-version: '3.8'
 services:
   wordpress:
     image: wordpress:latest
@@ -21,6 +20,7 @@ services:
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: rootpassword
     volumes:
       - mysql_data:/var/lib/mysql
     ports:
