@@ -1,5 +1,3 @@
-# Pydantic pour le typage User
-
 
 def filter_by_property(objects_list: list, property: str, value: any) -> list:
     return [object_item for object_item in objects_list if object_item[property] == value]
