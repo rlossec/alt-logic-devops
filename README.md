@@ -2,6 +2,10 @@
 
 ## Modélisation
 
+On retrouve 
+- mon analyse et mes modifications proposées dans [Analyse.md](modelisation/Analyse.md)
+- le [MCD initial](modelisation/initial_mcd.mermaid)
+- mon [MCD proposé](modelisation/proposed_mcd.mermaid)
 ## Logique
 
 Initialement, un fichier drafts.py avec tout. On avisera pour répartir.

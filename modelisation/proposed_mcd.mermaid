@@ -1,0 +1,85 @@
+erDiagram
+    LIVRE }|--|{ AUTEUR : "est écrit par"
+    LIVRE }|--|| EDITEUR : "est publié par"
+
+    LIVRE ||--o{ EXEMPLAIRE : "possède"
+    EXEMPLAIRE }o--|| EMPLACEMENT : "est rangé dans"
+
+    EXEMPLAIRE ||--|| EMPRUNT : "est concerné par"
+
+    ETUDIANT }|--|{ EMPRUNT : "effectue"
+    RESERVATION }|--|{ ETUDIANT : "fait"
+    SANCTION ||--|| ETUDIANT : "reçoit"
+    EMPRUNT ||--o{ BIBLIOTHECAIRE : "gère"
+
+    CATEGORIE }o--|| LIVRE : "appartient à"
+
+    LIVRE {
+        string uuid PK
+        string ISBN
+        string titre
+        string resume
+        date datePublication
+        string langue
+        int nbPages
+    }
+
+    EDITEUR {
+        string uuid PK
+        string raisonSociale
+        string adresse
+    }
+
+    AUTEUR {
+        string uuid PK
+        string nom
+        string prenom
+        string nationalite
+    }
+
+    EXEMPLAIRE {
+        string uuid PK
+        string code_barre
+        string etat
+        date dateAcquisition
+        float prixAchat
+    }
+
+    EMPLACEMENT {
+        string uuid PK
+        int etage
+        string section
+    }
+
+    ETUDIANT {
+        string nom
+        string prenom
+        string emailUniv
+        string telephone
+    }
+
+    EMPRUNT {
+        date dateEmprunt
+        date dateRetourPrevue
+        float penalite
+    }
+
+    BIBLIOTHECAIRE {
+        string nom PK
+        string prenom
+        string poste
+    }
+
+    RESERVATION {
+        date dateReservation
+    }
+
+    SANCTION {
+        string motif
+        float montant
+    }
+
+    CATEGORIE {
+        string libelle
+        string description
+    }
